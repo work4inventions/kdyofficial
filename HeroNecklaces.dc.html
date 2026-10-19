@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KDY Coming Soon Necklaces</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&amp;family=Jost:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F3F0F8}
+a{color:#1B1A1F}a:hover{color:#7A5C18}
+</style>
+</helmet>
+<div style="position: relative; min-height: 900px; box-sizing: border-box; overflow: hidden; background: #F3F0F8; color: #1B1A1F; font-family: 'Jost', sans-serif; display: flex; flex-direction: column">
+
+<img src="./assets/f4d2fdb11d289ffdbf58115f80aaece8.png" alt="KDY padlock necklaces in silver and gold, each engraved with the KDY mark" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 75% 55%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(243,240,248,0.96) 0%, rgba(243,240,248,0.86) 38%, rgba(243,240,248,0) 72%)"></div>
+
+<div style="position: relative; display: flex; flex-direction: column; flex: 1 1 auto; padding: 36px clamp(20px, 6vw, 96px) 32px">
+
+<div style="font-family: 'Bodoni Moda', serif; font-size: 30px; font-weight: 500; letter-spacing: 0.3em; line-height: 1">KDY</div>
+
+<div style="flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; gap: 24px; max-width: 620px; padding: 48px 0">
+<div style="display: inline-flex; align-items: center; gap: 12px; align-self: flex-start; font-size: 14px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; color: {{accent}}">
+<span aria-hidden="true" style="width: 48px; height: 2px; background: {{accent}}"></span>
+Launching soon
+</div>
+<h1 style="margin: 0; font-family: 'Bodoni Moda', serif; font-weight: 400; font-size: clamp(56px, 9vw, 128px); line-height: 0.95; letter-spacing: -0.02em">Coming<br><span style="font-style: italic; color: {{accent}}">soon.</span></h1>
+<p style="margin: 0; max-width: 440px; font-size: 18px; line-height: 1.6; color: #34313C">Padlock necklaces engraved with the KDY mark, in polished silver and warm gold.</p>
+<a href="https://kdyofficial.myshopify.com" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 0 28px; background: #1B1A1F; color: #F3F0F8; text-decoration: none; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500">Visit kdyofficial</a>
+</div>
+
+<div style="font-size: 13px; color: #3E3B46; letter-spacing: 0.06em">© 2026 KDY</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#7A5C18","options":["#7A5C18","#1B1A1F","#5B3F8C"]},"$preview":{"width":1360,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#7A5C18' };
+}
+}
+</script>
+</body>
+</html>
