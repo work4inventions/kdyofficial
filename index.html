@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KDY Coming Soon Necklaces</title>
 
-  <!-- Google Fonts (sirf CSS, JavaScript nahi) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500&display=swap">
@@ -16,10 +15,12 @@
       --ink: #1B1A1F;
       --ink-soft: #34313C;
       --ink-muted: #3E3B46;
-      --accent: #7A5C18;   /* gold accent - yahan se color change kar sakte ho */
+      --accent: #7A5C18;
     }
 
     * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
 
     body {
       margin: 0;
@@ -31,18 +32,18 @@
     a { color: var(--ink); }
     a:hover { color: var(--accent); }
 
-    /* Full page wrapper */
+    /* Full page wrapper: fixed height hata di, ab screen ke hisaab se adjust hoga */
     .page {
       position: relative;
-      min-height: 900px;
-      min-height: max(900px, 100vh);
+      min-height: 100vh;
+      min-height: 100dvh; /* mobile browser bar ke liye */
       display: flex;
       flex-direction: column;
       overflow: hidden;
       background: var(--bg);
     }
 
-    /* Background image */
+    /* Background image: hamesha poori screen cover karegi */
     .page__image {
       position: absolute;
       inset: 0;
@@ -52,7 +53,6 @@
       object-position: 75% 55%;
     }
 
-    /* Left side fade so text is readable */
     .page__overlay {
       position: absolute;
       inset: 0;
@@ -62,7 +62,6 @@
         rgba(243, 240, 248, 0) 72%);
     }
 
-    /* Content layer */
     .content {
       position: relative;
       flex: 1 1 auto;
@@ -71,12 +70,18 @@
       padding: 36px clamp(20px, 6vw, 96px) 32px;
     }
 
+    /* Logo: ab alag class hai, background image ki class nahi */
     .logo {
-      font-family: 'Bodoni Moda', serif;
-      font-size: 30px;
-      font-weight: 500;
-      letter-spacing: 0.3em;
-      line-height: 1;
+      display: inline-block;
+      align-self: flex-start;
+      line-height: 0;
+    }
+
+    .logo__img {
+      display: block;
+      height: clamp(28px, 4vw, 44px);
+      width: auto;
+      max-width: 100%;
     }
 
     .hero {
@@ -109,7 +114,7 @@
 
     .title {
       margin: 0;
-      font-family: Fraunces, serif;
+      font-family: 'Bodoni Moda', serif;
       font-weight: 400;
       font-size: clamp(56px, 9vw, 128px);
       line-height: 0.95;
@@ -127,7 +132,7 @@
       font-size: 18px;
       line-height: 1.6;
       color: var(--ink-soft);
-      font-family: "Work Sans", sans-serif;
+      font-family: 'Jost', sans-serif;
     }
 
     .button {
@@ -162,17 +167,30 @@
       color: var(--ink-muted);
     }
 
-    /* Mobile: image ke upar overlay zyada strong, taaki text clear dikhe */
+    /* Tablet / chhoti screen */
+    @media (max-width: 900px) {
+      .page__image { object-position: 70% 50%; }
+      .page__overlay {
+        background: linear-gradient(90deg,
+          rgba(243, 240, 248, 0.96) 0%,
+          rgba(243, 240, 248, 0.88) 50%,
+          rgba(243, 240, 248, 0.2) 100%);
+      }
+    }
+
+    /* Mobile */
     @media (max-width: 700px) {
+      .page__image { object-position: 65% center; }
       .page__overlay {
         background: linear-gradient(180deg,
           rgba(243, 240, 248, 0.94) 0%,
           rgba(243, 240, 248, 0.82) 60%,
           rgba(243, 240, 248, 0.4) 100%);
       }
-      .logo { font-size: 24px; }
+      .content { padding-top: 24px; }
       .eyebrow { font-size: 12px; letter-spacing: 0.22em; }
       .eyebrow__line { width: 32px; }
+      .hero { padding: 32px 0; }
     }
   </style>
 </head>
@@ -187,7 +205,9 @@
 
     <div class="content">
 
-      <div class="logo">KDY</div>
+      <a class="logo" href="/" aria-label="KDY home">
+        <img class="logo__img" src="./assets/logo-black.svg" alt="KDY">
+      </a>
 
       <main class="hero">
         <div class="eyebrow">
