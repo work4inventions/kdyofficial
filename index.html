@@ -45,13 +45,6 @@
       align-items: center;
   }
 
-
-    .logo {
-      display: inline-block;
-      align-self: flex-start;
-      line-height: 0;
-    }
-
     .logo__img {
     display: block;
     height: clamp(85px, 16vw, 160px);
@@ -65,6 +58,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      align-items: center;
       max-width: 620px;
       padding: 48px 0;
     }
@@ -73,7 +67,7 @@
       align-items: center;
       flex-direction: column;
       gap: 25px;
-      font-size: 28px;
+      font-size: clamp(17px, 5vw, 32px);
       font-weight: 600;
       letter-spacing: 0.25em;
       text-transform: uppercase;
@@ -102,11 +96,7 @@
       color: var(--ink-muted);
     }
 
-    /* Mobile */
-    @media (max-width: 700px) {
-      
-      .eyebrow { font-size: 12px; letter-spacing: 0.22em; }
-    }
+  
   </style>
 </head>
 
