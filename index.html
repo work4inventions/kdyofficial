@@ -10,27 +10,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500&display=swap">
 
   <style>
-    :root {
-      --bg: #F3F0F8;
-      --ink: #1B1A1F;
-      --ink-soft: #34313C;
-      --ink-muted: #3E3B46;
-      --accent: #7A5C18;
-    }
-
     * { box-sizing: border-box; }
 
     html, body { height: 100%; }
 
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--ink);
+      background: #fff;
+      color: #fff;
       font-family: 'Jost', sans-serif;
     }
 
-    a { color: var(--ink); }
-    a:hover { color: var(--accent); }
+    a { color: #fff; }
+    a:hover { color: #fff; }
 
     /* Full page wrapper: fixed height hata di, ab screen ke hisaab se adjust hoga */
     .page {
@@ -40,7 +32,7 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      background: var(--bg);
+      background: #fff;
       justify-content: center;
       align-items: center;
     }
@@ -52,9 +44,9 @@
       top: 0;
       bottom: 0;
       z-index: 1;
-      background: #fff;
+      background: #000;
       display: block;
-      opacity: 0.8;
+      opacity: 0.4;
     }
     .page > img {
       position: absolute;
@@ -93,31 +85,16 @@
       font-weight: 600;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--accent);
+      text-shadow: 0 0 11px #000;
+      color:  #fff;
   }
-
-    .title {
-      margin: 0;
-      font-family: 'Bodoni Moda', serif;
-      font-weight: 400;
-      font-size: clamp(56px, 9vw, 128px);
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-    }
-
-    .title em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-  
     .footer {
       font-size: 13px;
       letter-spacing: 0.06em;
       padding: 10px;
       position: relative;
       z-index: 2;
-      color: var(--ink-muted);
+      color: #fff;
     }
 
   
@@ -137,7 +114,7 @@
       
     </main>
 
-    <footer class="footer">© 2026 KDY</footer>
+    <footer class="footer">© 2026 KDYOFFICIAL</footer>
 
   </div>
 </body>
